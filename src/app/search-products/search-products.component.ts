@@ -17,7 +17,7 @@ export class SearchProductsComponent implements OnInit {
   ngOnInit() {
     this.product = new Product("AIR");
   }
-  onSearchProduct() {
+  onSearchProduct(event) {
     this.searchEngineService.showProducts(this.product);
   }
 
