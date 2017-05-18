@@ -1,0 +1,27 @@
+<div class="search-engine">
+<div class="tab">
+  <button class="tablinks" [ngClass]="{active:isSelected(1)}" (click)="selectTab(1);setProduct('AIR')">Pacotes</button>
+  <button class="tablinks"  [ngClass]="{active:isSelected(2)}" (click)="selectTab(2);setProduct('AIR')">Passagens Aéreas</button>
+  <button class="tablinks"  [ngClass]="{active:isSelected(3)}" (click)="selectTab(3);setProduct('HOT')">Hotéis e Resorts</button>
+  <button class="tablinks"  [ngClass]="{active:isSelected(4)}" (click)="selectTab(4);setProduct('CAR')">Carros</button>
+  <button class="tablinks"  [ngClass]="{active:isSelected(5)}" (click)="selectTab(5)">Intercâmbio</button>
+</div>
+
+<div [ngClass]="{active:isSelected(1),tabcontent:!isSelected(1)}">
+    <app-p-packages [product]="product" (searchProduct)="onSearchProduct($event)"></app-p-packages>
+</div>
+
+<div [ngClass]="{active:isSelected(2),tabcontent:!isSelected(2)}" class="tabcontent">
+<app-p-flights [product]="product" (searchProduct)="onSearchProduct($event)"></app-p-flights>
+</div>
+
+<div [ngClass]="{active:isSelected(3),tabcontent:!isSelected(3)}" class="tabcontent">
+ <app-p-hostels [product]="product" (searchProduct)="onSearchProduct($event)"></app-p-hostels>
+</div>
+<div [ngClass]="{active:isSelected(4),tabcontent:!isSelected(4)}" class="tabcontent">
+  <app-p-cars [product]="product" (searchProduct)="onSearchProduct($event)"></app-p-cars>
+</div>
+<div [ngClass]="{active:isSelected(5),tabcontent:!isSelected(5)}" class="tabcontent">
+  <app-p-exchanges [product]="product" (searchProduct)="onSearchProduct($event)"></app-p-exchanges>
+</div>
+</div>

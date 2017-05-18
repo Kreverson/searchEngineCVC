@@ -1,0 +1,17 @@
+<div class="p-header text-center">
+    <input [(ngModel)]="product.oneTrip" value="false" type="radio" name="typeflighttravel" />
+    <label>Ida e volta</label>
+    <input [(ngModel)]="product.oneTrip"  value="true" type="radio" name="typeflighttravel" />
+    <label>Somente Ida</label>
+</div>
+<hr/>
+<div class="p-content">
+    <app-c-locations [product]="product" [labelLocation]="['Origem','Destino']"></app-c-locations>
+    <app-c-date-picker [schedule]="product.schedule" [labelDateType]="['Ida','Volta']"></app-c-date-picker>
+    <app-c-chkdirectflights [product]="product"></app-c-chkdirectflights>
+</div>
+<hr/>
+<div class="p-content">
+    <app-c-passengers [passenger]="product.passenger"></app-c-passengers>
+    <app-c-btnsearch (searchProduct)="onSearchProduct($event)" [product]="product"></app-c-btnsearch>
+</div>

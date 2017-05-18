@@ -1,1 +1,49 @@
-/* You can add global styles to this file, and also import other style files */
+.text-center{
+    text-align: center;
+}
+.p-header{
+    text-transform: uppercase;
+}
+.p-header,.p-content{
+    margin: 10px;
+}
+.form-control{
+       padding: 0.5rem 0.75rem;
+        height: 35px;
+}
+.btn-search{
+    background-color: #fbdf23;
+    text-transform: uppercase;
+    color: #5c4d00;
+    box-shadow: 2px 3px 0px #f2c722;
+    font-weight: 600;
+}
+.displaynone{
+    display: none;
+}
+.control-label span {
+    font-size: 9px;
+    display: inline-table;
+}
+.passenger-opt {
+    float: right;
+}
+.passenger-label {
+    float: left;
+     width: 70px;
+}
+.pull-right{
+    float: right;
+}
+.pull-left{
+    float:left;
+}
+select {
+    height: 35px !important;
+    font-size: 14px !important;
+    padding: 0px 0px 0px 12px !important;
+}
+.validationsummary ul {
+    list-style-type: none;
+    color: red;
+}

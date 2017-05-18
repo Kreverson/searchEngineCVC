@@ -1,0 +1,24 @@
+<div class="row">
+  <div class="form-group">
+    <div [ngClass]="{formGroup:showFromLocale(),displaynone:!showFromLocale()}">
+    <div class="{{setWidthStyle()}}">
+      <label>{{labelLocation[0]}}:</label>
+      <ng2-completer [(ngModel)]="product.locale.fromLocaleText" (selected)="onFromLocaleSelected($event)" (focus)="setProductType();" [inputClass]="inputClass" [datasource]="locationService" [textSearching]="textSearching"
+        [textNoResults]="textNoResults" [placeholder]="placeholder" [minSearchLength]="3"></ng2-completer>
+    </div>
+    </div>
+    <div [ngClass]="{formGroup:product.productType == 'CAR',displaynone:product.productType != 'CAR'}">
+      <div class="col-md-12 col-sm-12 col-xs-12">
+        <app-c-chkcarlocaldelivery [locale]="product.locale"></app-c-chkcarlocaldelivery>
+      </div>
+    </div>
+    <div [ngClass]="{formGroup:showToLocale(),displaynone:!showToLocale()}">
+      <div class="{{setWidthStyle()}}">
+        <label>{{labelLocation[1]}}:</label>
+        <ng2-completer [(ngModel)]="product.locale.toLocaleText" (selected)="onToLocaleSelected($event)" (focus)="setProductType();" [inputClass]="inputClass" [datasource]="locationService" [textSearching]="textSearching"
+          [textNoResults]="textNoResults" [placeholder]="placeholder" [minSearchLength]="3"></ng2-completer>
+      </div>
+    </div>
+  </div>
+
+</div>

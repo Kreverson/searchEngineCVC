@@ -1,0 +1,5 @@
+<div class="p-content">
+    <app-c-locations [product]="product" [labelLocation]="['Local de retirada','Local de entrega']"></app-c-locations>
+    <app-c-date-picker [schedule]="product.schedule" [labelDateType]="['Início','Término']"></app-c-date-picker>
+    <app-c-btnsearch (searchProduct)="onSearchProduct($event)" [product]="product"></app-c-btnsearch>
+</div>

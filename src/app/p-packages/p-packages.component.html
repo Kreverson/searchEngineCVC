@@ -1,0 +1,15 @@
+<div class="p-header">
+    <input [(ngModel)]="product.flightAndHostel" type="radio" />
+    <label>Passagem + Hotel
+        <a href="javascript:;">[?]</a>
+    </label>
+</div>
+<hr/>
+<div class="p-content">
+    <app-c-locations [product]="product" [labelLocation]="['Origem','Destino']"></app-c-locations>
+    <app-c-date-picker [schedule]="product.schedule" [labelDateType]="['Ida','Volta']"></app-c-date-picker>
+    <app-c-rooms [room]="product.rooms"></app-c-rooms>
+    <app-c-chkdirectflights [product]="product"></app-c-chkdirectflights>
+    <app-c-btnsearch (searchProduct)="onSearchProduct($event)" [product]="product"></app-c-btnsearch>
+    
+</div>

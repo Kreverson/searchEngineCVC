@@ -1,0 +1,6 @@
+<div class="p-content">
+    <app-c-locations [product]="product" [labelLocation]="['-','Destino / hotel']"></app-c-locations>
+    <app-c-date-picker [schedule]="product.schedule" [labelDateType]="['Entrada','Saída']"></app-c-date-picker>
+    <app-c-rooms [room]="product.rooms"></app-c-rooms>
+    <app-c-btnsearch (searchProduct)="onSearchProduct($event)" [product]="product"></app-c-btnsearch>  
+</div>
