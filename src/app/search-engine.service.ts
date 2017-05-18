@@ -9,7 +9,7 @@ export class SearchEngineService {
   showProducts(product: Product) {
     let address = "";
     if (product.productType == "AIR" && !product.passenger.isSelected) {
-      address += "http://www.cvc.com.br/monte-sua-viagem/resultados?";
+      address += "http://novosite.cvc.com.br/monte-sua-viagem/resultados?";
       address += "fromCityCode=" + product.locale.fromLocaleCode;
       address += "&toCityCode=" + product.locale.toLocaleCode;
       address += "&leaveDate=" + product.schedule.minDate + "T00:00:00-03:00";
@@ -19,7 +19,7 @@ export class SearchEngineService {
       address += "&directTrip=" + product.directTrip;
     }
     else if (product.productType == "AIR" && product.passenger.isSelected) {
-      address += " http://www.cvc.com.br/passagens-aereas/resultados?";
+      address += " http://novosite.cvc.com.br/passagens-aereas/resultados?";
       address += "fromCityCode=" + product.locale.fromLocaleCode;
       address += "&toCityCode=" + product.locale.toLocaleCode;
       address += "&leaveDate=" + product.schedule.minDate + "T00:00:00-03:00";
@@ -32,7 +32,7 @@ export class SearchEngineService {
 
     }
     else if (product.productType == "CAR") {
-      address += "http://www.cvc.com.br/carros/resultados?";
+      address += "http://novosite.cvc.com.br/carros/resultados?";
       address += "pickUpLocationCode=" + product.locale.fromLocaleCode;
       if (product.locale.carlocaldeliverydif)
         address += "&returnLocationCode=" + product.locale.toLocaleCode;
@@ -43,7 +43,7 @@ export class SearchEngineService {
 
     }
     else if (product.productType == "HOT") {
-      address += "http://www.cvc.com.br/hoteis/resultados?";
+      address += "http://novosite.cvc.com.br/hoteis/resultados?";
       address += "cityCode=" + product.locale.toLocaleCode;
       address += "&checkIn=" + product.schedule.minDate + "T00:00:00-03:00";
       address += "&checkOut=" + product.schedule.maxDate + "T00:00:00-03:00";
